@@ -1,0 +1,230 @@
+%-------------------------%
+% Resume in Latex
+% Author : Tanani Mouhsin
+% License : MIT
+%------------------------%
+
+\documentclass[a4paper,9pt]{article} % 9pt instead of 10pt
+
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{tcolorbox}
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+
+%% ====== PAGE SETTINGS ======
+\geometry{left=1.0cm, top=0.5cm, right=1.0cm, bottom=0.5cm} %% smaller margins
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\parskip}{0pt}
+\linespread{0.93} %% slightly tighter line spacing
+
+%% ====== SECTION FORMATTING ======
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+%% ====== ITEMIZE SHORTCUTS ======
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0pt, label={}, topsep=0pt]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=1em, topsep=0pt, itemsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
+%% ====== SUBHEADING ======
+\newcommand{\resumeSubheading}[4]{
+  \item
+  \begin{tabular*}{0.98\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{#1} & \textit{\small #4} \\
+  \textit{\small #3} & \small #2 \\
+  \end{tabular*}
+}
+
+\newcommand{\resumeProject}[3]{
+  \item
+  \textbf{#1} \hfill \textit{\small #3} \\
+  \textit{\small #2}
+}
+
+%======================
+% HEADER
+%======================
+\begin{document}
+
+\newcommand{\sep}{\hspace{0.2cm}\textbar\hspace{0.2cm}}
+
+\begin{minipage}[c]{0.75\textwidth}
+    \vspace*{0pt}
+    \raggedright
+    \textbf{\fontsize{16 pt}{16 pt}\selectfont TANANI Mouhsin} %% smaller than 18pt
+
+    \vspace{0.05 cm}
+    \textbf{\fontsize{9 pt}{9 pt}\selectfont Data science, Big Data and AI Engineering Student}
+
+    \vspace{0.05 cm}
+\normalsize
+{\footnotesize
+\faMapMarker* Taroudant, Morocco \sep
+\href{mailto:tananimouhsin@gmail.com}{\faEnvelope[regular]\ tananimouhsin@gmail.com} \sep
+\faPhone* 212 6 87 01 14 68 \sep
+\href{https://www.linkedin.com/in/mouhsin-tanani-692b87263/}{\faLinkedinIn\ TananiMouhsin} \sep
+\href{https://github.com/TananiMouhsin}{\faGithub\ TananiMouhsin}
+}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.23\textwidth}
+    \vspace*{0pt}
+    \centering
+    \begin{tikzpicture}
+        \node[circle, minimum size=3cm, path picture={ %% shrink picture
+            \node at (path picture bounding box.center){
+                \includegraphics[width=3cm,height=3cm]{pic.png}
+            };
+        }]{};
+    \end{tikzpicture}
+\end{minipage}
+
+\vspace{1pt}
+
+%======================
+% EDUCATION
+%======================
+\section{Education}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{ENSIASD – National School of AI and Digital Sciences}
+{Taroudant, Morocco}
+{2nd year Engineering Cycle student in Data Science, Big Data and AI}
+{2024 -- Present}
+
+\resumeSubheading
+{Higher School of Technology (EST)}
+{Safi, Morocco}
+{DUT in Computer Science}
+{2022 -- 2024}
+
+\resumeSubheading
+{Ibn Sina High School}
+{Guelmim, Morocco}
+{Baccalaureate in Physical and Chemical Sciences}
+{2021 -- 2022}
+
+\resumeSubHeadingListEnd
+
+%======================
+% EXPERIENCE
+%======================
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{AI Engineering Intern – XAI}
+{Remote}
+{Artificial Intelligence Internship}
+{Jul 2025 -- Aug 2025}
+
+\resumeItemListStart
+\item Developed an \textbf{innovative real-time multi-modal emotion recognition system} by integrating text and audio streams, demonstrating \textbf{eagerness to learn cutting-edge technologies}.
+\item Fine-tuned a \textbf{BERT-based Transformer} for text emotion classification.
+\item Extracted \textbf{TRILL audio embeddings} and trained a \textbf{CNN–LSTM} model for prosody-based emotion detection.
+\resumeItemListEnd
+
+\textbf{Tech:} Python, TensorFlow, PyTorch, HuggingFace Transformers, TRILL, BERT, Librosa, FastAPI
+
+\vspace{1pt}
+
+\resumeSubheading
+{AI Development Intern – HYATT Regency}
+{Casablanca, Morocco}
+{Mobile \& AI Development Internship}
+{Apr 2024 -- Jun 2024}
+
+\resumeItemListStart
+\item Engineered a \textbf{Random Forest classifier} for proactive reservation cancellation prediction, achieving \textbf{86\% accuracy} and enabling \textbf{strategic decision-making}.
+\item Demonstrated \textbf{proactivity} by developing a full-stack hotel and event booking mobile application with admin features, \textbf{reducing processing time by 37\%}.
+\resumeItemListEnd
+
+\textbf{Tech:} Python, Scikit-learn, Pandas, PostgreSQL, Flutter, NestJS 
+
+\vspace{1pt}
+
+\resumeSubheading
+{AI Development Intern – Delegation of Agriculture}
+{Guelmim, Morocco}
+{Web \& AI Development Internship}
+{Jul 2023}
+
+\resumeItemListStart
+\item Implemented a \textbf{strategic Random Forest-based crop recommendation model}, leveraging climate, soil, and land features for optimized agricultural planning.
+\item Built an \textbf{innovative digital platform} directly connecting local farmers to buyers, significantly \textbf{increasing farmers’ income} and fostering community growth.
+\resumeItemListEnd
+
+\textbf{Tech:} Python, Scikit-learn, Pandas
+
+\resumeSubHeadingListEnd
+
+%======================
+% PROJECTS
+%======================
+\section{Projects}
+\resumeSubHeadingListStart
+
+\resumeProject
+{Chifaa – AI-Powered Medical Diagnosis Mobile App}
+{Mobile application providing heart failure and brain stroke prediction from laboratory data via OCR, and Alzheimer’s disease prediction from MRI images.}
+
+
+\resumeItemListStart
+\item Designed and implemented an \textbf{innovative OCR system} for precise extraction of clinical data, critical for advanced diagnostic models.
+\item Showcased \textbf{adaptability} by integrating diverse machine learning models (\textbf{Random Forest, SVM, CNN}) into the backend, achieving an \textbf{overall accuracy exceeding 85\%} and ensuring robust predictions via \textbf{NestJS APIs}.
+\resumeItemListEnd
+{Tech: Python, TensorFlow, Scikit-learn, OCR, NestJS, Flutter, PostgreSQL}
+\vspace{1pt}
+
+\resumeProject
+{CVFit – AI-Based CV Optimizer \& Job Matching Platform}
+{Web-based platform that analyzes CVs, suggests targeted improvements, and scrapes relevant job opportunities from the web.}
+
+
+\resumeItemListStart
+\item Leveraged \textbf{cutting-edge OpenAI API} with advanced \textbf{prompt engineering} to generate highly personalized and \textbf{innovative CV improvement suggestions}.
+\item Developed robust job opportunity scraping and \textbf{strategic relevance-based ranking} using \textbf{Jsoup}.
+\item Demonstrated \textbf{proactivity} and impact by streamlining CV optimization and job discovery, successfully \textbf{reducing job search time by 30\%}.
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+{Tech: Java, Spring Boot, Jsoup, OpenAI API, REST APIs}
+%======================
+% SKILLS & LANGUAGES
+%======================
+\section{Technologies}
+\small{
+\textbf{AI \& ML:} NLP (Transformers, BERT, Hugging Face), Computer Vision (OCR), Audio Processing (TRILL), Random Forest, SVM, CNN, LSTM\\
+\textbf{Languages:} Python, Java, TypeScript, Dart\\
+\textbf{Frameworks:} FastAPI, Spring Boot, Flutter, NestJS\\
+\textbf{Libraries:} Pandas, NumPy, Scikit-learn, TensorFlow, PyTorch\\
+\textbf{Databases:} MongoDB, PostgreSQL, MySQL\\
+\textbf{Containerisation \& Orchestration:} Docker\\
+\textbf{Tools:} Git, GitHub, REST APIs, Agile
+}
+
+\vspace{-6pt} %% move it up
+\section{Languages & Activities}
+\small{
+\textbf{Languages:} Arabic (Native), French (Fluent), English (Advanced) \\
+\textbf{Activities:} President of the IT Innovation Club at ENSIASD, Onsite Events Responsible at MDS
+}
+
+\end{document}
