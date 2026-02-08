@@ -10,7 +10,6 @@
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
-
 \usepackage{graphicx}
 \usepackage{multicol}
 \usepackage{tcolorbox}
@@ -56,12 +55,12 @@
 %======================
 \begin{document}
 
-\newcommand{\sep}{\hspace{0.2cm}\textbar\hspace{0.2cm}}
+\newcommand{\sep}{\hspace{0.2cm}|\hspace{0.2cm}}
 
 \begin{minipage}[c]{0.75\textwidth}
     \vspace*{0pt}
     \raggedright
-    \textbf{\fontsize{16 pt}{16 pt}\selectfont TANANI Mouhsin} %% smaller than 18pt
+    \textbf{\fontsize{16 pt}{16 pt}\selectfont TANANI Mouhsin}
 
     \vspace{0.05 cm}
     \textbf{\fontsize{9 pt}{9 pt}\selectfont Data science, Big Data and AI Engineering Student}
@@ -69,11 +68,11 @@
     \vspace{0.05 cm}
 \normalsize
 {\footnotesize
-\faMapMarker* Taroudant, Morocco \sep
-\href{mailto:tananimouhsin@gmail.com}{\faEnvelope[regular]\ tananimouhsin@gmail.com} \sep
-\faPhone* 212 6 87 01 14 68 \sep
-\href{https://www.linkedin.com/in/mouhsin-tanani-692b87263/}{\faLinkedinIn\ TananiMouhsin} \sep
-\href{https://github.com/TananiMouhsin}{\faGithub\ TananiMouhsin}
+📍 Taroudant, Morocco \sep
+\href{mailto:tananimouhsin@gmail.com}{✉ tananimouhsin@gmail.com} \sep
+📞 212 6 87 01 14 68 \sep
+\href{https://www.linkedin.com/in/mouhsin-tanani-692b87263/}{LinkedIn: TananiMouhsin} \sep
+\href{https://github.com/TananiMouhsin}{GitHub: TananiMouhsin}
 }
 \end{minipage}
 \hfill
@@ -81,7 +80,7 @@
     \vspace*{0pt}
     \centering
     \begin{tikzpicture}
-        \node[circle, minimum size=3cm, path picture={ %% shrink picture
+        \node[circle, minimum size=3cm, path picture={
             \node at (path picture bounding box.center) {
                 \includegraphics[width=3cm,height=3cm]{pic.png}
             };
@@ -130,14 +129,12 @@
 {Jul 2025 -- Aug 2025}
 
 \resumeItemListStart
-\item Led the development of a real-time \textbf{multi-modal emotion recognition system} leveraging cutting-edge text and audio processing.
-\item Applied and fine-tuned a \textbf{BERT-based Transformer} for advanced text emotion classification, demonstrating aptitude for state-of-the-art NLP.
-\item Pioneered the use of \textbf{TRILL audio embeddings} and developed a \textbf{CNN–LSTM} model for novel prosody-based emotion detection.
+\item Led the development of a real-time \textbf{multi-modal emotion recognition system} leveraging text and audio processing.
+\item Applied and fine-tuned a \textbf{BERT-based Transformer} for text emotion classification.
+\item Pioneered the use of \textbf{TRILL audio embeddings} and developed a \textbf{CNN–LSTM} model for prosody-based emotion detection.
 \resumeItemListEnd
 
 \textbf{Tech:} Python, TensorFlow, PyTorch, HuggingFace Transformers, TRILL, BERT, Librosa, FastAPI
-
-\vspace{1pt}
 
 \resumeSubheading
 {AI Development Intern – HYATT Regency}
@@ -146,13 +143,11 @@
 {Apr 2024 -- Jun 2024}
 
 \resumeItemListStart
-\item Developed and deployed a \textbf{Random Forest classifier} for reservation cancellation prediction, achieving \textbf{86\% accuracy} and showcasing practical AI application.
-\item Collaborated on developing a comprehensive hotel and event booking mobile application, including admin features, which \textbf{reduced processing time by 37\%}.
+\item Developed a \textbf{Random Forest classifier} for reservation cancellation prediction, achieving \textbf{86\% accuracy}.
+\item Collaborated on a hotel and event booking mobile app with admin features, reducing processing time by 37\%.
 \resumeItemListEnd
 
 \textbf{Tech:} Python, Scikit-learn, Pandas, PostgreSQL, Flutter, NestJS 
-
-\vspace{1pt}
 
 \resumeSubheading
 {AI Development Intern – Delegation of Agriculture}
@@ -161,8 +156,8 @@
 {Jul 2023}
 
 \resumeItemListStart
-\item Designed and implemented an innovative \textbf{Random Forest-based crop recommendation model}, integrating diverse climate, soil, and land features.
-\item Collaboratively built a digital platform connecting local farmers directly to buyers, leading to a demonstrable \textbf{increase in farmers’ income}.
+\item Designed a \textbf{Random Forest-based crop recommendation model} using climate, soil, and land features.
+\item Built a digital platform connecting local farmers directly to buyers, increasing farmers’ income.
 \resumeItemListEnd
 
 \textbf{Tech:} Python, Scikit-learn, Pandas
@@ -177,29 +172,26 @@
 
 \resumeProject
 {Chifaa – AI-Powered Medical Diagnosis Mobile App}
-{Mobile application providing heart failure and brain stroke prediction from laboratory data via OCR, and Alzheimer’s disease prediction from MRI images.}
-
+{Mobile app for heart failure, brain stroke prediction via OCR, and Alzheimer’s prediction from MRI.}
 
 \resumeItemListStart
-\item Engineered an advanced \textbf{OCR system} for accurate extraction of clinical data, critical for subsequent AI prediction models.
-\item Proactively integrated and optimized multiple AI models (\textbf{Random Forest, SVM, CNN}) with the backend via \textbf{NestJS APIs}, achieving an \textbf{overall accuracy exceeding 85\%} in medical diagnosis.
+\item Developed an \textbf{OCR system} for extracting clinical data.
+\item Integrated multiple AI models (\textbf{Random Forest, SVM, CNN}) via \textbf{NestJS APIs}.
 \resumeItemListEnd
 {Tech: Python, TensorFlow, Scikit-learn, OCR, NestJS, Flutter, PostgreSQL}
-\vspace{1pt}
 
 \resumeProject
 {CVFit – AI-Based CV Optimizer \& Job Matching Platform}
-{Web-based platform that analyzes CVs, suggests targeted improvements, and scrapes relevant job opportunities from the web.}
-
+{Web platform analyzing CVs, suggesting improvements, and scraping job opportunities.}
 
 \resumeItemListStart
-\item Demonstrated technical aptitude by leveraging the \textbf{OpenAI API} with advanced \textbf{prompt engineering} for personalized CV optimization suggestions.
-\item Developed a robust job opportunity scraping and relevance-based ranking mechanism using \textbf{Jsoup}, enhancing user experience.
-\item Innovated the job search process, streamlining CV optimization and job discovery, ultimately \textbf{reducing job search time by 30\%}.
+\item Leveraged the \textbf{OpenAI API} with advanced \textbf{prompt engineering} for CV optimization.
+\item Built a job opportunity scraping and ranking system with \textbf{Jsoup}.
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
 {Tech: Java, Spring Boot, Jsoup, OpenAI API, REST APIs}
+
 %======================
 % SKILLS & LANGUAGES
 %======================
@@ -208,17 +200,16 @@
 \textbf{Languages:} Python, Java, TypeScript, Dart\\
 \textbf{Frameworks:} FastAPI, Spring Boot, Flutter\\
 \textbf{Databases:} MongoDB, PostgreSQL, MySQL\\
-\textbf{AI \& ML:} NLP (Transformers, BERT, Hugging Face), Computer Vision (OCR), Audio Processing (TRILL), Random Forest, SVM, CNN, LSTM, Prompt Engineering\\
+\textbf{AI \& ML:} NLP (Transformers, BERT), Computer Vision (OCR), Audio Processing (TRILL), Random Forest, SVM, CNN, LSTM, Prompt Engineering\\
 \textbf{Libraries:} Pandas, NumPy, Scikit-learn, TensorFlow, PyTorch\\
-\textbf{Containerisation \& Orchestration:} Docker\\
 \textbf{Tools:} Git, GitHub, REST APIs, Agile
 }
 
-\vspace{-6pt} %% move it up
+\vspace{-6pt} 
 \section{Languages \& Activities}
 \small{
 \textbf{Languages:} Arabic (Native), French (Fluent), English (Advanced) \\
-\textbf{Activities:} President of the IT Innovation Club at ENSIASD (Fostering innovation and leading collaborative projects), Onsite Events Responsible at MDS (Demonstrating adaptability and proactive event management)
+\textbf{Activities:} President of IT Innovation Club at ENSIASD, Onsite Events Responsible at MDS
 }
 
 \end{document}
