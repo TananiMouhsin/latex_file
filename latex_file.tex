@@ -1,0 +1,224 @@
+\documentclass[a4paper,9pt]{article} % 9pt instead of 10pt
+
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{tcolorbox}
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+
+%% ====== PAGE SETTINGS ======
+\geometry{left=1.0cm, top=0.5cm, right=1.0cm, bottom=0.5cm} %% smaller margins
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\parskip}{0pt}
+\linespread{0.93} %% slightly tighter line spacing
+
+%% ====== SECTION FORMATTING ======
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+%% ====== ITEMIZE SHORTCUTS ======
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0pt, label={}, topsep=0pt]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=1em, topsep=0pt, itemsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
+%% ====== SUBHEADING ======
+\newcommand{\resumeSubheading}[4]{
+  \item
+  \begin{tabular*}{0.98\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textit{\small #4} \\
+    \textit{\small #3} & \small #2 \\
+  \end{tabular*}
+}
+
+\newcommand{\resumeProject}[3]{
+  \item
+  \textbf{#1} \hfill \textit{\small #3} \\
+  \textit{\small #2}
+}
+
+%======================
+% HEADER
+%======================
+\begin{document}
+
+\newcommand{\sep}{\hspace{0.2cm}\textbar\hspace{0.2cm}}
+
+\begin{minipage}[c]{0.75\textwidth}
+    \vspace*{0pt}
+    \raggedright
+    \textbf{\fontsize{16 pt}{16 pt}\selectfont TANANI Mouhsin} %% smaller than 18pt
+
+    \vspace{0.05 cm}
+    \textbf{\fontsize{9 pt}{9 pt}\selectfont AI & Big Data Engineering Student}
+
+    \vspace{0.05 cm}
+\normalsize
+{\footnotesize
+\faMapMarker* Taroudant, Morocco \sep
+\href{mailto:tananimouhsin@gmail.com}{\faEnvelope[regular]\ tananimouhsin@gmail.com} \sep
+\faPhone*\ 212 6 87 01 14 68 \sep
+\href{https://www.linkedin.com/in/mouhsin-tanani-692b87263/}{\faLinkedinIn\ TananiMouhsin} \sep
+\href{https://github.com/TananiMouhsin}{\faGithub\ TananiMouhsin}
+}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.23\textwidth}
+    \vspace*{0pt}
+    \centering
+    \begin{tikzpicture}
+        \node[circle, minimum size=3cm, path picture={ %% shrink picture
+            \node at (path picture bounding box.center) {
+                \includegraphics[width=3cm,height=3cm]{pic.png}
+            };
+        }] {};
+    \end{tikzpicture}
+\end{minipage}
+
+\vspace{1pt}
+
+%======================
+% EDUCATION
+%======================
+\section{Education}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{ENSIASD – National School of AI and Digital Sciences}
+{Taroudant, Morocco}
+{2nd year Engineering Cycle student in Data Science, Big Data and AI}
+{2024 -- Present}
+
+\resumeSubheading
+{Higher School of Technology (EST)}
+{Safi, Morocco}
+{DUT in Computer Science}
+{2022 -- 2024}
+
+\resumeSubheading
+{Ibn Sina High School}
+{Guelmim, Morocco}
+{Baccalaureate in Physical and Chemical Sciences}
+{2021 -- 2022}
+
+\resumeSubHeadingListEnd
+
+%======================
+% EXPERIENCE
+%======================
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{AI Engineering Intern – XAI}
+{Remote}
+{Artificial Intelligence Internship}
+{Jul 2025 -- Aug 2025}
+
+\resumeItemListStart
+\item Pioneered a real-time \textbf{multi-modal emotion recognition system} integrating text and audio streams, demonstrating \textbf{innovation} and strong \textbf{technical aptitude}.
+\item Proactively learned and applied advanced techniques, including fine-tuning a \textbf{BERT-based Transformer} for text emotion classification, showcasing \textbf{eagerness to learn new technologies}.
+\item Developed and optimized a \textbf{CNN–LSTM model} using \textbf{TRILL audio embeddings} for robust prosody-based emotion detection, highlighting deep learning expertise.
+\resumeItemListEnd
+
+\textbf{Tech:} Python, TensorFlow, PyTorch, HuggingFace Transformers, TRILL, BERT, Librosa, FastAPI
+
+\vspace{1pt}
+
+\resumeSubheading
+{AI Development Intern – HYATT Regency}
+{Casablanca, Morocco}
+{Mobile \& AI Development Internship}
+{Apr 2024 -- Jun 2024}
+
+\resumeItemListStart
+\item Applied \textbf{strategic thinking} to develop a \textbf{Random Forest classifier} for reservation cancellation prediction, achieving \textbf{86\% accuracy} and enabling data-driven decision-making.
+\item Designed and developed a hotel and event booking mobile application with admin management features, \textbf{reducing processing time by 37\%} to enhance \textbf{client focus} and operational efficiency.
+\resumeItemListEnd
+
+\textbf{Tech:} Python, Scikit-learn, Pandas, PostgreSQL, Flutter, NestJS 
+
+\vspace{1pt}
+
+\resumeSubheading
+{AI Development Intern – Delegation of Agriculture}
+{Guelmim, Morocco}
+{Web \& AI Development Internship}
+{Jul 2023}
+
+\resumeItemListStart
+\item Demonstrated strong \textbf{client focus} by implementing a \textbf{Random Forest-based crop recommendation model} leveraging climate, soil, and land data to optimize agricultural yield.
+\item Initiated and built an \textbf{innovative digital platform} connecting local farmers directly to buyers, resulting in a \textbf{measurable increase in farmers’ income} through enhanced market access.
+\resumeItemListEnd
+
+\textbf{Tech:} Python, Scikit-learn, Pandas
+
+\resumeSubHeadingListEnd
+
+%======================
+% PROJECTS
+%======================
+\section{Projects}
+\resumeSubHeadingListStart
+
+\resumeProject
+{Chifaa – AI-Powered Medical Diagnosis Mobile App}
+{Mobile application providing heart failure and brain stroke prediction from laboratory data via OCR, and Alzheimer’s disease prediction from MRI images.}
+{} % This argument is intentionally left empty to match the original template's usage where tech was outside.
+\resumeItemListStart
+\item Led the development of \textbf{Chifaa}, an \textbf{innovative AI-powered mobile application} for medical diagnosis, demonstrating strong \textbf{client focus} in healthcare solutions.
+\item Engineered an advanced \textbf{OCR system} to accurately extract critical clinical data from laboratory reports for seamless integration into prediction models, showcasing \textbf{technical aptitude}.
+\item Successfully implemented and integrated diverse AI models (\textbf{Random Forest, SVM, CNN}) with a NestJS backend, achieving an \textbf{overall accuracy exceeding 85\%} and ensuring robust prediction capabilities.
+\resumeItemListEnd
+{Tech: Python, TensorFlow, Scikit-learn, OCR, NestJS, Flutter, PostgreSQL}
+\vspace{1pt}
+
+\resumeProject
+{CVFit – AI-Based CV Optimizer \& Job Matching Platform}
+{Web-based platform that analyzes CVs, suggests targeted improvements, and scrapes relevant job opportunities from the web.}
+{} % This argument is intentionally left empty.
+\resumeItemListStart
+\item Developed \textbf{CVFit}, an \textbf{innovative AI-based web platform} designed to optimize CVs and match users with relevant job opportunities, showcasing a strong \textbf{client focus} on user success.
+\item Leveraged the \textbf{OpenAI API} and advanced \textbf{prompt engineering} to deliver personalized CV improvement suggestions, demonstrating \textbf{eagerness to learn new technologies} and high \textbf{technical aptitude}.
+\item Implemented robust job opportunity scraping with \textbf{Jsoup} and developed a relevance-based ranking system, leading to a \textbf{30\% reduction in job search time} for users.
+\resumeItemListEnd
+{Tech: Java, Spring Boot, Jsoup, OpenAI API, REST APIs}
+
+\resumeSubHeadingListEnd
+
+%======================
+% SKILLS & LANGUAGES
+%======================
+\section{Technologies}
+\small{
+\textbf{Languages:} Python, Java, TypeScript, Dart\\
+\textbf{Frameworks:} FastAPI, Spring Boot, Flutter\\
+\textbf{Databases:} MongoDB, PostgreSQL, MySQL\\
+\textbf{AI \& ML:} NLP (\textbf{Transformers}, \textbf{BERT}, \textbf{Hugging Face}), Computer Vision (\textbf{OCR}), Audio Processing (\textbf{TRILL}), Random Forest, SVM, CNN, LSTM\\
+\textbf{Libraries:} Pandas, NumPy, Scikit-learn, TensorFlow, PyTorch\\
+\textbf{Containerisation \& Orchestration:} Docker\\
+\textbf{Tools:} Git, GitHub, REST APIs, Agile
+}
+
+\vspace{-6pt} %% move it up
+\section{Languages \& Activities}
+\small{
+\textbf{Languages:} Arabic (Native), French (Fluent), English (Advanced) \\
+\textbf{Activities:} President of the IT \textbf{Innovation} Club at ENSIASD: Led initiatives, fostered \textbf{teamwork}, and drove technology adoption, demonstrating \textbf{strategic thinking} and \textbf{adaptability}. Onsite Events Responsible at MDS: Managed logistics and ensured successful execution of events, highlighting \textbf{teamwork} and organizational skills.
+}
+
+\end{document}
