@@ -1,4 +1,4 @@
-\documentclass[a4paper,9pt]{article}
+\documentclass[a4paper,9pt]{article} %% 9pt instead of 10pt
 
 \usepackage{latexsym}
 \usepackage{xcolor}
@@ -10,15 +10,16 @@
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
+\usepackage{multicol}
 \usepackage[T1]{fontenc}
 
 %% ====== PAGE SETTINGS ======
-\geometry{left=1.0cm, top=0.5cm, right=1.0cm, bottom=0.5cm}
+\geometry{left=1.0cm, top=0.5cm, right=1.0cm, bottom=0.5cm} %% smaller margins
 \pagestyle{fancy}
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
 \setlength{\parskip}{0pt}
-\linespread{0.93}
+\linespread{0.93} %% slightly tighter line spacing
 
 %% ====== SECTION FORMATTING ======
 \titleformat{\section}{
@@ -35,8 +36,8 @@
 \newcommand{\resumeSubheading}[4]{
   \item
   \begin{tabular*}{0.98\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{#1} & \textit{\small #4} \\
-  \textit{\small #3} & \small #2 \\
+    \textbf{#1} & \textit{\small #4} \\
+    \textit{\small #3} & \small #2 \\
   \end{tabular*}
 }
 
@@ -46,37 +47,37 @@
   \textit{\small #2}
 }
 
-%% ======================
-%% HEADER
-%% ======================
+% ======================
+% HEADER
+% ======================
 \begin{document}
 
 \newcommand{\sep}{\hspace{0.2cm}\textbar\hspace{0.2cm}}
 
-\begin{minipage}[c]{0.99\textwidth}
+\begin{minipage}[c]{\textwidth}
     \vspace*{0pt}
     \raggedright
-    \textbf{\fontsize{16 pt}{16 pt}\selectfont TANANI Mouhsin}
+    \textbf{\fontsize{16 pt}{16 pt}\selectfont TANANI Mouhsin} %% smaller than 18pt
 
     \vspace{0.05 cm}
-    \textbf{\fontsize{9 pt}{9 pt}\selectfont Aspiring Data Analyst | Data Science Student}
+    \textbf{\fontsize{9 pt}{9 pt}\selectfont Aspiring Data Analyst | Reporting & Business Intelligence Enthusiast}
 
     \vspace{0.05 cm}
 \normalsize
 {\footnotesize
-Taroudant, Morocco \sep
-\href{mailto:tananimouhsin@gmail.com}{tananimouhsin@gmail.com} \sep
-+212 6 87 01 14 68 \sep
-\href{https://www.linkedin.com/in/mouhsin-tanani-692b87263/}{LinkedIn/TananiMouhsin} \sep
-\href{https://github.com/TananiMouhsin}{GitHub/TananiMouhsin}
+Location: Taroudant, Morocco \sep
+Email: \href{mailto:tananimouhsin@gmail.com}{tananimouhsin@gmail.com} \sep
+Phone: 212 6 87 01 14 68 \sep
+LinkedIn: \href{https://www.linkedin.com/in/mouhsin-tanani-692b87263/}{TananiMouhsin} \sep
+GitHub: \href{https://github.com/TananiMouhsin}{TananiMouhsin}
 }
 \end{minipage}
 
 \vspace{1pt}
 
-%% ======================
-%% EDUCATION
-%% ======================
+% ======================
+% EDUCATION
+% ======================
 \section{Education}
 \resumeSubHeadingListStart
 
@@ -100,9 +101,9 @@ Taroudant, Morocco \sep
 
 \resumeSubHeadingListEnd
 
-%% ======================
-%% EXPERIENCE
-%% ======================
+% ======================
+% EXPERIENCE
+% ======================
 \section{Experience}
 \resumeSubHeadingListStart
 
@@ -113,8 +114,8 @@ Taroudant, Morocco \sep
 {Apr 2024 -- Jun 2024}
 
 \resumeItemListStart
-\item Performed \textbf{data analysis and predictive modeling} using a Random Forest classifier to forecast reservation cancellations, achieving \textbf{86\% accuracy} and providing actionable insights for operational planning.
-\item Contributed to \textbf{reporting automation} by developing a mobile application with admin features, streamlining booking processes and \textbf{reducing administrative processing time by 37\%}.
+\item Developed a Random Forest classifier for reservation cancellation prediction, achieving \textbf{86\% accuracy} through comprehensive data analysis and model optimization.
+\item Improved operational efficiency by \textbf{37\%} through the development of a hotel and event booking mobile application with administrative features.
 \resumeItemListEnd
 
 \textbf{Tech:} Python, Scikit-learn, Pandas, PostgreSQL, Flutter, NestJS
@@ -128,8 +129,8 @@ Taroudant, Morocco \sep
 {Jul 2023}
 
 \resumeItemListStart
-\item Conducted \textbf{data analysis and developed a Random Forest-based model} for crop recommendation, integrating climate, soil, and land features to provide data-driven agricultural guidance.
-\item Designed a digital platform to connect farmers and buyers, leveraging data to improve market access and contributing to a measurable \textbf{increase in farmers’ income}.
+\item Designed and implemented a Random Forest-based crop recommendation model, analyzing climate, soil, and land features to provide \textbf{data-driven insights}.
+\item Developed a digital platform to connect local farmers directly with buyers, improving market access and contributing to an \textbf{increase in farmers’ income}.
 \resumeItemListEnd
 
 \textbf{Tech:} Python, Scikit-learn, Pandas
@@ -143,18 +144,18 @@ Taroudant, Morocco \sep
 {Jul 2025 -- Aug 2025}
 
 \resumeItemListStart
-\item Integrated and analyzed complex \textbf{multi-modal data streams} (text and audio) to develop a real-time emotion recognition system.
-\item Applied advanced \textbf{text data analysis} techniques by fine-tuning a BERT-based Transformer for precise emotion classification.
-\item Performed \textbf{audio data feature extraction} (TRILL embeddings) and developed a CNN-LSTM model for sophisticated prosody-based emotion analysis.
+\item Designed and implemented a real-time multi-modal emotion recognition system, analyzing text and audio data streams for comprehensive insights.
+\item Optimized a BERT-based Transformer for text emotion classification, involving extensive data preprocessing and model evaluation.
+\item Processed and extracted TRILL audio embeddings, then developed a CNN–LSTM model for prosody-based emotion detection, focusing on data feature engineering.
 \resumeItemListEnd
 
 \textbf{Tech:} Python, TensorFlow, PyTorch, HuggingFace Transformers, TRILL, BERT, Librosa, FastAPI
 
 \resumeSubHeadingListEnd
 
-%% ======================
-%% PROJECTS
-%% ======================
+% ======================
+% PROJECTS
+% ======================
 \section{Projects}
 \resumeSubHeadingListStart
 
@@ -163,8 +164,8 @@ Taroudant, Morocco \sep
 {Mobile application providing heart failure and brain stroke prediction from laboratory data via OCR, and Alzheimer’s disease prediction from MRI images.}
 {Tech: Python, TensorFlow, Scikit-learn, OCR, NestJS, Flutter, PostgreSQL}
 \resumeItemListStart
-\item Developed an \textbf{OCR system} for automated extraction of critical clinical data, foundational for subsequent predictive analysis.
-\item Implemented and integrated multiple \textbf{data analysis models} (Random Forest, SVM, CNN) for medical diagnosis, achieving an \textbf{overall accuracy exceeding 85\%} and enabling data-driven healthcare insights.
+\item Developed an \textbf{OCR system} for efficient extraction of critical clinical data from laboratory reports, enabling automated data input for diagnostic models.
+\item Integrated and optimized multiple machine learning models (\textbf{Random Forest, SVM, CNN}), achieving an \textbf{overall accuracy exceeding 85\%} in medical predictions, and managed data storage via \textbf{NestJS APIs}.
 \resumeItemListEnd
 \vspace{1pt}
 
@@ -173,28 +174,26 @@ Taroudant, Morocco \sep
 {Web-based platform that analyzes CVs, suggests targeted improvements, and scrapes relevant job opportunities from the web.}
 {Tech: Java, Spring Boot, Jsoup, OpenAI API, REST APIs}
 \resumeItemListStart
-\item Utilized the \textbf{OpenAI API} and \textbf{prompt engineering} for advanced text data analysis to provide personalized CV optimization recommendations.
-\item Developed automated \textbf{data collection} (scraping) and relevance-based ranking systems for comprehensive job market analysis.
-\item Significantly \textbf{streamlined and automated} CV optimization and job discovery processes, leading to a \textbf{30\% reduction in job search time}.
+\item Utilized the \textbf{OpenAI API} with structured \textbf{prompt engineering} to analyze CVs and generate personalized improvement suggestions.
+\item Implemented robust web scraping for job opportunities and developed a \textbf{relevance-based ranking system} using \textbf{Jsoup} for efficient job discovery.
+\item Streamlined CV optimization and job discovery, \textbf{reducing job search time by 30\%}.
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
 
-%% ======================
-%% SKILLS & LANGUAGES
-%% ======================
-\section{Technologies}
+% ======================
+% SKILLS & LANGUAGES
+% ======================
+\section{Technical Skills}
 \small{
+\textbf{Data Analysis \& ML:} Python (Pandas, NumPy, Scikit-learn), Random Forest, SVM, CNN, LSTM, TensorFlow, PyTorch, NLP (Transformers, BERT, Hugging Face), Computer Vision (OCR), Audio Processing (TRILL)\\
 \textbf{Languages:} Python, Java, TypeScript, Dart\\
 \textbf{Frameworks:} FastAPI, Spring Boot, Flutter\\
-\textbf{Databases:} PostgreSQL, MySQL, MongoDB, SQL\\
-\textbf{Data Analysis \& ML:} NLP (Transformers, BERT, Hugging Face), Computer Vision (OCR), Audio Processing (TRILL), Random Forest, SVM, CNN, LSTM\\
-\textbf{Libraries:} Pandas, NumPy, Scikit-learn, TensorFlow, PyTorch\\
-\textbf{Containerisation \& Orchestration:} Docker\\
-\textbf{Tools:} Git, GitHub, REST APIs, Agile
+\textbf{Databases:} MongoDB, PostgreSQL, MySQL\\
+\textbf{DevOps \& Tools:} Docker, Git, GitHub, REST APIs, Agile
 }
 
-\vspace{-6pt}
+\vspace{-6pt} %% move it up
 \section{Languages \& Activities}
 \small{
 \textbf{Languages:} Arabic (Native), French (Fluent), English (Advanced) \\
