@@ -1,4 +1,11 @@
-\documentclass[a4paper,9pt]{article} % 9pt instead of 10pt
+```latex
+%-------------------------
+% Resume in Latex
+% Author : Tanani Mouhsin
+% License : MIT
+%------------------------
+
+\documentclass[a4paper,9pt]{article} %% 9pt instead of 10pt
 
 \usepackage{latexsym}
 \usepackage{xcolor}
@@ -10,7 +17,12 @@
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{tcolorbox}
 \usepackage[T1]{fontenc}
+\usepackage{tikz}
 
 %% ====== PAGE SETTINGS ======
 \geometry{left=1.0cm, top=0.5cm, right=1.0cm, bottom=0.5cm} %% smaller margins
@@ -21,7 +33,7 @@
 \linespread{0.93} %% slightly tighter line spacing
 
 %% ====== SECTION FORMATTING ======
-\titleformat{\section}{%
+\titleformat{\section}{
   \vspace{-10pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
 
@@ -32,15 +44,15 @@
 \newcommand{\resumeItemListEnd}{\end{itemize}}
 
 %% ====== SUBHEADING ======
-\newcommand{\resumeSubheading}[4]{%
+\newcommand{\resumeSubheading}[4]{
   \item
   \begin{tabular*}{0.98\textwidth}{l@{\extracolsep{\fill}}r}
-    \textbf{#1} & \textit{\small #4} \\
-    \textit{\small #3} & \small #2 \\
+  \textbf{#1} & \textit{\small #4} \\
+  \textit{\small #3} & \small #2 \\
   \end{tabular*}
 }
 
-\newcommand{\resumeProject}[3]{%
+\newcommand{\resumeProject}[3]{
   \item
   \textbf{#1} \hfill \textit{\small #3} \\
   \textit{\small #2}
@@ -53,19 +65,36 @@
 
 \newcommand{\sep}{\hspace{0.2cm}\textbar\hspace{0.2cm}}
 
-\begin{center}
-    {\fontsize{16 pt}{16 pt}\selectfont\textbf{TANANI Mouhsin}} \\
+\begin{minipage}[c]{0.75\textwidth}
+    \vspace*{0pt}
+    \raggedright
+    \textbf{\fontsize{16 pt}{16 pt}\selectfont TANANI Mouhsin} %% smaller than 18pt
+
     \vspace{0.05 cm}
-    {\fontsize{9 pt}{9 pt}\selectfont\textbf{Data Science, Big Data, and AI Engineering Student}} \\
-    \vspace{0.1 cm}
-    \small{
-        Taroudant, Morocco \sep
-        Email: \href{mailto:tananimouhsin@gmail.com}{tananimouhsin@gmail.com} \sep
-        Phone: 212 6 87 01 14 68 \sep
-        LinkedIn: \href{https://www.linkedin.com/in/mouhsin-tanani-692b87263/}{TananiMouhsin} \sep
-        GitHub: \href{https://github.com/TananiMouhsin}{TananiMouhsin}
-    }
-\end{center}
+    \textbf{\fontsize{9 pt}{9 pt}\selectfont Data Science, Big Data and AI Engineering Student}
+
+    \vspace{0.05 cm}
+\normalsize
+{\footnotesize
+\faMapMarker* Taroudant, Morocco \sep
+\href{mailto:tananimouhsin@gmail.com}{\faEnvelope[regular]\ tananimouhsin@gmail.com} \sep
+\faPhone* 212 6 87 01 14 68 \sep
+\href{https://www.linkedin.com/in/mouhsin-tanani-692b87263/}{\faLinkedinIn\ TananiMouhsin} \sep
+\href{https://github.com/TananiMouhsin}{\faGithub\ TananiMouhsin}
+}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.23\textwidth}
+    \vspace*{0pt}
+    \centering
+    \begin{tikzpicture}
+        \node[circle, minimum size=3cm, path picture={ %% shrink picture
+            \node at (path picture bounding box.center) {
+                \includegraphics[width=3cm,height=3cm]{pic.png}
+            };
+        }] {};
+    \end{tikzpicture}
+\end{minipage}
 
 \vspace{1pt}
 
@@ -108,9 +137,9 @@
 {Jul 2025 -- Aug 2025}
 
 \resumeItemListStart
-\item Innovated and developed a real-time \textbf{multi-modal emotion recognition system}, integrating text and audio streams.
-\item Demonstrated adaptability and eagerness to learn by fine-tuning a \textbf{BERT-based Transformer} for advanced text emotion classification.
-\item Leveraged technical aptitude to extract \textbf{TRILL audio embeddings} and train a robust \textbf{CNN–LSTM} model for prosody-based emotion detection.
+\item Built a real-time \textbf{multi-modal emotion recognition system} using text and audio streams, involving extensive data processing.
+\item Fine-tuned a \textbf{BERT-based Transformer} for text emotion classification, enhancing data interpretation capabilities.
+\item Extracted \textbf{TRILL audio embeddings} and trained a \textbf{CNN–LSTM} model for prosody-based emotion detection, demonstrating advanced data feature engineering.
 \resumeItemListEnd
 
 \textbf{Tech:} Python, TensorFlow, PyTorch, HuggingFace Transformers, TRILL, BERT, Librosa, FastAPI
@@ -124,8 +153,8 @@
 {Apr 2024 -- Jun 2024}
 
 \resumeItemListStart
-\item Proactively developed a \textbf{Random Forest classifier} for reservation cancellation prediction, achieving \textbf{86\% accuracy}, demonstrating strong technical aptitude.
-\item Contributed to project success by developing a hotel and event booking mobile application with admin management features, improving processing time by 37\%.
+\item Performed \textbf{data analysis} to develop a \textbf{Random Forest classifier} for reservation cancellation prediction, achieving \textbf{86\% accuracy} and providing valuable business insights.
+\item Designed and developed a hotel and event booking mobile application with admin management, \textbf{automating data processing} and \textbf{reducing operational time by 37\%}.
 \resumeItemListEnd
 
 \textbf{Tech:} Python, Scikit-learn, Pandas, PostgreSQL, Flutter, NestJS 
@@ -139,8 +168,8 @@
 {Jul 2023}
 
 \resumeItemListStart
-\item Applied technical aptitude to implement a \textbf{Random Forest-based crop recommendation model} using climate, soil, and land features.
-\item Initiated and built an innovative digital platform, directly connecting local farmers to buyers and significantly increasing farmers’ income.
+\item Conducted \textbf{data analysis} on climate, soil, and land features to implement a \textbf{Random Forest-based crop recommendation model}, supporting data-driven agricultural decisions.
+\item Developed a digital platform to streamline farmer-buyer connections, leveraging data to contribute to an \textbf{increase in farmers’ income}.
 \resumeItemListEnd
 
 \textbf{Tech:} Python, Scikit-learn, Pandas
@@ -155,47 +184,46 @@
 
 \resumeProject
 {Chifaa – AI-Powered Medical Diagnosis Mobile App}
-{A mobile application pioneering AI-powered medical diagnosis, predicting heart failure, brain stroke from OCR-extracted lab data, and Alzheimer's from MRI images, demonstrating innovation and technical depth.}
-{Tech: Python, TensorFlow, Scikit-learn, OCR, NestJS, Flutter, PostgreSQL}
+{Mobile application providing heart failure and brain stroke prediction from laboratory data via OCR, and Alzheimer’s disease prediction from MRI images.}
+
 
 \resumeItemListStart
-\item Innovatively developed an \textbf{OCR system} to accurately extract clinical data, demonstrating strong technical aptitude in computer vision.
-\item Managed and integrated diverse AI models (\textbf{Random Forest, SVM, CNN}) with the backend, achieving an \textbf{overall accuracy exceeding 85\%}, through \textbf{NestJS APIs}, showcasing effective project participation.
+\item Engineered an \textbf{OCR system} for \textbf{automated extraction} of clinical data, facilitating efficient data input for diagnostic prediction models.
+\item Applied comprehensive \textbf{data analysis} techniques and integrated machine learning models (\textbf{Random Forest, SVM, CNN}), achieving an \textbf{overall prediction accuracy exceeding 85\%} and storing predictions for potential \textbf{reporting and dashboarding} via \textbf{NestJS APIs}.
 \resumeItemListEnd
+{Tech: Python, TensorFlow, Scikit-learn, OCR, NestJS, Flutter, PostgreSQL}
 \vspace{1pt}
 
 \resumeProject
 {CVFit – AI-Based CV Optimizer \& Job Matching Platform}
-{An innovative web platform designed to analyze CVs, provide targeted improvements, and scrape relevant job opportunities, enhancing job seeker efficiency.}
-{Tech: Java, Spring Boot, Jsoup, OpenAI API, REST APIs}
+{Web-based platform that analyzes CVs, suggests targeted improvements, and scrapes relevant job opportunities from the web.}
+
 
 \resumeItemListStart
-\item Demonstrated eagerness to learn and technical aptitude by leveraging the \textbf{OpenAI API} with advanced \textbf{prompt engineering} for personalized CV optimization.
-\item Proactively implemented web scraping and relevance-based ranking using \textbf{Jsoup} for efficient job opportunity discovery.
-\item Successfully streamlined CV optimization and job discovery, resulting in a \textbf{30\% reduction in job search time}, showcasing innovative problem-solving.
+\item Leveraged the \textbf{OpenAI API} with structured \textbf{prompt engineering} to generate personalized CV improvement suggestions, demonstrating advanced data processing.
+\item Implemented job opportunity scraping and relevance-based ranking using \textbf{Jsoup}, showcasing data collection and analysis skills.
+\item Streamlined and \textbf{automated} CV optimization and job discovery processes, leveraging data analysis to achieve a \textbf{30\% reduction in job search time} and improve user efficiency.
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
-
+{Tech: Java, Spring Boot, Jsoup, OpenAI API, REST APIs}
 %======================
 % SKILLS & LANGUAGES
 %======================
 \section{Technologies}
-\small{%
-\textbf{Languages:} Python, Java, TypeScript, Dart\\
-\textbf{Frameworks:} FastAPI, Spring Boot, Flutter\\
-\textbf{Databases:} MongoDB, PostgreSQL, MySQL\\
-\textbf{AI \& ML:} NLP (Transformers, BERT, Hugging Face), Computer Vision (OCR), Audio Processing (TRILL), Random Forest, SVM, CNN, LSTM\\
-\textbf{Libraries:} Pandas, NumPy, Scikit-learn, TensorFlow, PyTorch\\
-\textbf{Containerisation \& Orchestration:} Docker\\
-\textbf{Tools:} Git, GitHub, REST APIs, Agile
-}%
+\small{
+\textbf{Data Analysis \& ML:} Python (Pandas, NumPy, Scikit-learn), Random Forest, SVM, CNN, LSTM, TensorFlow, PyTorch, NLP (Transformers, BERT, Hugging Face), Computer Vision (OCR), Audio Processing (TRILL)\\
+\textbf{Databases:} PostgreSQL, MySQL, MongoDB\\
+\textbf{Development:} Java, TypeScript, Dart, FastAPI, Spring Boot, Flutter, NestJS\\
+\textbf{Tools & Platforms:} Git, GitHub, Docker, REST APIs, Agile
+}
 
 \vspace{-6pt} %% move it up
-\section{Languages \& Activities}
-\small{%
+\section{Languages & Activities}
+\small{
 \textbf{Languages:} Arabic (Native), French (Fluent), English (Advanced) \\
 \textbf{Activities:} President of the IT Innovation Club at ENSIASD, Onsite Events Responsible at MDS
-}%
+}
 
 \end{document}
+```
