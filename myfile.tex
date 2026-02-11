@@ -1,4 +1,4 @@
-\documentclass[a4paper,9pt]{article} %% 9pt instead of 10pt
+\documentclass[a4paper,9pt]{article}
 
 \usepackage{latexsym}
 \usepackage{xcolor}
@@ -13,12 +13,12 @@
 \usepackage[T1]{fontenc}
 
 %% ====== PAGE SETTINGS ======
-\geometry{left=1.0cm, top=0.5cm, right=1.0cm, bottom=0.5cm} %% smaller margins
+\geometry{left=1.0cm, top=0.5cm, right=1.0cm, bottom=0.5cm}
 \pagestyle{fancy}
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
 \setlength{\parskip}{0pt}
-\linespread{0.93} %% slightly tighter line spacing
+\linespread{0.93}
 
 %% ====== SECTION FORMATTING ======
 \titleformat{\section}{
@@ -35,8 +35,8 @@
 \newcommand{\resumeSubheading}[4]{
   \item
   \begin{tabular*}{0.98\textwidth}{l@{\extracolsep{\fill}}r}
-    \textbf{#1} & \textit{\small #4} \\
-    \textit{\small #3} & \small #2 \\
+  \textbf{#1} & \textit{\small #4} \\
+  \textit{\small #3} & \small #2 \\
   \end{tabular*}
 }
 
@@ -46,40 +46,31 @@
   \textit{\small #2}
 }
 
-% ======================
-% HEADER
-% ======================
+%% ======================
+%% HEADER
+%% ======================
 \begin{document}
 
-\newcommand{\sep}{\hspace{0.2cm}\textbar\hspace{0.2cm}}
-
-\begin{minipage}[c]{0.99\textwidth} % Adjusted width for full text without image
-    \vspace*{0pt}
-    \raggedright
-    \textbf{\fontsize{16 pt}{16 pt}\selectfont TANANI Mouhsin}
-    \vspace{0.05 cm}
-    \textbf{\fontsize{9 pt}{9 pt}\selectfont Data Science, Big Data and AI Engineering Student}
-    \vspace{0.05 cm}
+\raggedright
+\textbf{\fontsize{16 pt}{16 pt}\selectfont TANANI Mouhsin}
+\vspace{0.05 cm}
+\textbf{\fontsize{9 pt}{9 pt}\selectfont Data Science Student | Data Analysis \& Reporting Focus}
+\vspace{0.05 cm}
 \normalsize
 {\footnotesize
-Location: Taroudant, Morocco \sep
-\href{mailto:tananimouhsin@gmail.com}{Email: tananimouhsin@gmail.com} \sep
-Phone: +212 6 87 01 14 68 \sep
-\href{https://www.linkedin.com/in/mouhsin-tanani-692b87263/}{LinkedIn: TananiMouhsin} \sep
-\href{https://github.com/TananiMouhsin}{GitHub: TananiMouhsin}
+Taroudant, Morocco | Email: \href{mailto:tananimouhsin@gmail.com}{tananimouhsin@gmail.com} | Phone: +212 6 87 01 14 68 | LinkedIn: \href{https://www.linkedin.com/in/mouhsin-tanani-692b87263/}{TananiMouhsin} | GitHub: \href{https://github.com/TananiMouhsin}{TananiMouhsin}
 }
-\end{minipage}
 
 \vspace{1pt}
 
-% ======================
-% EDUCATION
-% ======================
+%% ======================
+%% EDUCATION
+%% ======================
 \section{Education}
 \resumeSubHeadingListStart
 
 \resumeSubheading
-{ENSIASD -- National School of AI and Digital Sciences}
+{ENSIASD --- National School of AI and Digital Sciences}
 {Taroudant, Morocco}
 {2nd year Engineering Cycle student in Data Science, Big Data and AI}
 {2024 -- Present}
@@ -98,22 +89,22 @@ Phone: +212 6 87 01 14 68 \sep
 
 \resumeSubHeadingListEnd
 
-% ======================
-% EXPERIENCE
-% ======================
+%% ======================
+%% EXPERIENCE
+%% ======================
 \section{Experience}
 \resumeSubHeadingListStart
 
 \resumeSubheading
-{AI Engineering Intern -- XAI}
+{AI Engineering Intern --- XAI}
 {Remote}
 {Artificial Intelligence Internship}
 {Jul 2025 -- Aug 2025}
 
 \resumeItemListStart
-\item Developed a real-time \textbf{multi-modal emotion recognition system}, involving comprehensive data processing of text and audio streams.
-\item Applied advanced data analysis techniques by fine-tuning a \textbf{BERT-based Transformer} for text emotion classification.
-\item Performed data extraction and feature engineering (\textbf{TRILL audio embeddings}) to train a \textbf{CNN--LSTM} model for prosody-based emotion detection.
+\item Developed a real-time \textbf{multi-modal emotion recognition system}, demonstrating strong \textbf{data analysis} capabilities across text and audio streams.
+\item Applied advanced \textbf{data analysis} techniques to fine-tune a \textbf{BERT-based Transformer} for accurate text emotion classification.
+\item Conducted in-depth audio \textbf{data analysis}, extracting \textbf{TRILL audio embeddings} and training a \textbf{CNN-LSTM} model for robust prosody-based emotion detection.
 \resumeItemListEnd
 
 \textbf{Tech:} Python, TensorFlow, PyTorch, HuggingFace Transformers, TRILL, BERT, Librosa, FastAPI
@@ -121,14 +112,14 @@ Phone: +212 6 87 01 14 68 \sep
 \vspace{1pt}
 
 \resumeSubheading
-{AI Development Intern -- HYATT Regency}
+{AI Development Intern --- HYATT Regency}
 {Casablanca, Morocco}
 {Mobile \& AI Development Internship}
 {Apr 2024 -- Jun 2024}
 
 \resumeItemListStart
-\item Performed data analysis and predictive modeling, developing a \textbf{Random Forest classifier} for reservation cancellation prediction with \textbf{86\% accuracy}.
-\item Streamlined operations by developing a hotel and event booking mobile application with administrative features, reducing processing time by 37\%.
+\item Led \textbf{data analysis} to develop a \textbf{Random Forest classifier} for reservation cancellation prediction, achieving an \textbf{86\% accuracy} rate and providing actionable analytical insights for hotel management.
+\item Designed and implemented a hotel and event booking mobile application with administrative features, streamlining data management and \textbf{reducing processing time by 37\%}.
 \resumeItemListEnd
 
 \textbf{Tech:} Python, Scikit-learn, Pandas, PostgreSQL, Flutter, NestJS
@@ -136,70 +127,67 @@ Phone: +212 6 87 01 14 68 \sep
 \vspace{1pt}
 
 \resumeSubheading
-{AI Development Intern -- Delegation of Agriculture}
+{AI Development Intern --- Delegation of Agriculture}
 {Guelmim, Morocco}
 {Web \& AI Development Internship}
 {Jul 2023}
 
 \resumeItemListStart
-\item Analyzed diverse datasets (climate, soil, and land features) to implement a \textbf{Random Forest-based crop recommendation model}.
-\item Developed a digital platform facilitating direct farmer-to-buyer connections, contributing to an increase in farmers' income.
+\item Utilized \textbf{data analysis} to implement a \textbf{Random Forest-based crop recommendation model}, integrating climate, soil, and land features to provide data-driven agricultural insights.
+\item Developed a digital platform to connect local farmers directly with buyers, resulting in a measurable \textbf{increase in farmers' income} by optimizing market access and transparency.
 \resumeItemListEnd
 
 \textbf{Tech:} Python, Scikit-learn, Pandas
 
 \resumeSubHeadingListEnd
 
-% ======================
-% PROJECTS
-% ======================
+%% ======================
+%% PROJECTS
+%% ======================
 \section{Projects}
 \resumeSubHeadingListStart
 
 \resumeProject
-{Chifaa -- AI-Powered Medical Diagnosis Mobile App}
+{Chifaa --- AI-Powered Medical Diagnosis Mobile App}
 {Mobile application providing heart failure and brain stroke prediction from laboratory data via OCR, and Alzheimer's disease prediction from MRI images.}
-{} % Tech moved to the end of the item list to be consistent with other projects
-
-\resumeItemListStart
-\item Developed an \textbf{OCR system} for efficient extraction of relevant clinical data from laboratory reports, enabling data-driven diagnostic predictions.
-\item Integrated and deployed multiple predictive models (\textbf{Random Forest, SVM, CNN}) with the backend, achieving over \textbf{85\% accuracy} for medical diagnosis, with predictions managed via \textbf{NestJS APIs}.
-\resumeItemListEnd
 {Tech: Python, TensorFlow, Scikit-learn, OCR, NestJS, Flutter, PostgreSQL}
+\resumeItemListStart
+\item Engineered an \textbf{OCR system} for efficient extraction and processing of clinical data from laboratory reports, enabling comprehensive \textbf{data analysis} for medical predictions.
+\item Conducted advanced \textbf{data analysis} and model integration, deploying multiple machine learning models (\textbf{Random Forest, SVM, CNN}) with a backend, achieving an \textbf{overall accuracy exceeding 85\%} in medical diagnosis and providing robust analytical outputs.
+\resumeItemListEnd
 \vspace{1pt}
 
 \resumeProject
-{CVFit -- AI-Based CV Optimizer \& Job Matching Platform} % Escaped &
+{CVFit --- AI-Based CV Optimizer \& Job Matching Platform}
 {Web-based platform that analyzes CVs, suggests targeted improvements, and scrapes relevant job opportunities from the web.}
-{} % Tech moved to the end of the item list to be consistent with other projects
-
+{Tech: Java, Spring Boot, Jsoup, OpenAI API, REST APIs}
 \resumeItemListStart
-\item Designed and implemented robust \textbf{data scraping (Jsoup)} for job opportunities, coupled with a relevance-based ranking system for optimized job matching.
-\item Streamlined the job search process through automated CV optimization and job discovery, resulting in a \textbf{30\% reduction in search time}.
-\item Utilized the \textbf{OpenAI API} and structured \textbf{prompt engineering} to provide data-driven, personalized CV improvement suggestions.
+\item Designed and implemented structured \textbf{prompt engineering} with the \textbf{OpenAI API} to perform \textbf{data analysis} on CVs and generate personalized, data-driven improvement suggestions.
+\item Developed automated job opportunity \textbf{data scraping} and relevance-based ranking systems using \textbf{Jsoup}, enhancing \textbf{reporting automation} for job seekers.
+\item Significantly streamlined CV optimization and job discovery processes, demonstrably \textbf{reducing job search time by 30\%} through data-driven recommendations and automated matching.
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
-{Tech: Java, Spring Boot, Jsoup, OpenAI API, REST APIs}
 
-% ======================
-% SKILLS & LANGUAGES
-% ======================
+%% ======================
+%% SKILLS & LANGUAGES
+%% ======================
 \section{Technologies}
-\small{
-\textbf{Data Analysis \& ML Libraries:} Pandas, NumPy, Scikit-learn, TensorFlow, PyTorch, Hugging Face Transformers\\
-\textbf{Data Processing \& AI:} NLP (BERT), Computer Vision (OCR), Audio Processing (TRILL), Random Forest, SVM, CNN, LSTM\\
-\textbf{Databases:} PostgreSQL, MySQL, MongoDB\\
+\small{%
 \textbf{Languages:} Python, Java, TypeScript, Dart\\
 \textbf{Frameworks:} FastAPI, Spring Boot, Flutter\\
-\textbf{Tools \& Platforms:} Git, GitHub, REST APIs, Docker, Agile
-}
+\textbf{Databases:} MongoDB, PostgreSQL, MySQL\\
+\textbf{Data Analysis \& ML:} NLP (Transformers, BERT, Hugging Face), Computer Vision (OCR), Audio Processing (TRILL), Random Forest, SVM, CNN, LSTM\\
+\textbf{Libraries:} Pandas, NumPy, Scikit-learn, TensorFlow, PyTorch\\
+\textbf{Containerisation \& Orchestration:} Docker\\
+\textbf{Tools:} Git, GitHub, REST APIs, Agile
+}%
 
-\vspace{-6pt} %% move it up
+\vspace{-6pt}
 \section{Languages \& Activities}
-\small{
+\small{%
 \textbf{Languages:} Arabic (Native), French (Fluent), English (Advanced) \\
 \textbf{Activities:} President of the IT Innovation Club at ENSIASD, Onsite Events Responsible at MDS
-}
+}%
 
 \end{document}
