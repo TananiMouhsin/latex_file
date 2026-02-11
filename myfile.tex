@@ -1,4 +1,4 @@
-\documentclass[a4paper,9pt]{article}
+\documentclass[a4paper,9pt]{article} % 9pt instead of 10pt
 
 \usepackage{latexsym}
 \usepackage{xcolor}
@@ -10,67 +10,116 @@
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{tcolorbox}
 \usepackage[T1]{fontenc}
+\usepackage{tikz}
 
-%% ====== PAGE SETTINGS ======
-\geometry{left=1.0cm, top=0.5cm, right=1.0cm, bottom=0.5cm}
+% ====== PAGE SETTINGS ======
+\geometry{left=1.0cm, top=0.5cm, right=1.0cm, bottom=0.5cm} % smaller margins
 \pagestyle{fancy}
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
 \setlength{\parskip}{0pt}
-\linespread{0.93}
+\linespread{0.93} % slightly tighter line spacing
 
-%% ====== SECTION FORMATTING ======
-\titleformat{\section}{
-  \vspace{-10pt}\scshape\raggedright\large
+% ====== SECTION FORMATTING ======
+% Redefine section to include an icon
+% \newcommand{\rsection}[2]{%
+%   \vspace{-10pt}\section{\raggedright\scshape\large #1 \faIcon{#2}}\vspace{-6pt}
+% }
+
+\titleformat{\section}{%
+  \vspace{-10pt}\scshape\raggedright\large%
 }{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
 
-%% ====== ITEMIZE SHORTCUTS ======
+% ====== ITEMIZE SHORTCUTS ======
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0pt, label={}, topsep=0pt]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=1em, topsep=0pt, itemsep=0pt]}
 \newcommand{\resumeItemListEnd}{\end{itemize}}
 
-%% ====== SUBHEADING ======
-\newcommand{\resumeSubheading}[4]{
+% ====== SUBHEADING ======
+\newcommand{\resumeSubheading}[4]{%
   \item
-  \begin{tabular*}{0.98\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{#1} & \textit{\small #4} \\
-  \textit{\small #3} & \small #2 \\
-  \end{tabular*}
+  \begin{tabular*}{0.98\textwidth}{l@{\extracolsep{\fill}}r}%
+  \textbf{#1} & \textit{\small #4} \\%
+  \textit{\small #3} & \small #2 \\%
+  \end{tabular*}%
 }
 
-\newcommand{\resumeProject}[3]{
+\newcommand{\resumeProject}[3]{%
   \item
-  \textbf{#1} \hfill \textit{\small #3} \\
-  \textit{\small #2}
+  \textbf{#1} \hfill \textit{\small #3} \\%
+  \textit{\small #2}%
 }
 
-%% ======================
-%% HEADER
-%% ======================
+% ======================
+% HEADER
+% ======================
 \begin{document}
 
-\raggedright
-\textbf{\fontsize{16 pt}{16 pt}\selectfont TANANI Mouhsin}
-\vspace{0.05 cm}
-\textbf{\fontsize{9 pt}{9 pt}\selectfont Data Science Student | Data Analysis \& Reporting Focus}
-\vspace{0.05 cm}
+\newcommand{\sep}{\hspace{0.2cm}\textbar\hspace{0.2cm}}
+
+\begin{minipage}[c]{0.75\textwidth}
+    \vspace*{0pt}
+    \raggedright
+    \textbf{\fontsize{16 pt}{16 pt}\selectfont TANANI Mouhsin} % smaller than 18pt
+
+    \vspace{0.05 cm}
+    \textbf{\fontsize{9 pt}{9 pt}\selectfont Aspiring Data Analyst | AI & Data Science Engineering Student} % Optimized for target job
+
+    \vspace{0.05 cm}
 \normalsize
 {\footnotesize
-Taroudant, Morocco | Email: \href{mailto:tananimouhsin@gmail.com}{tananimouhsin@gmail.com} | Phone: +212 6 87 01 14 68 | LinkedIn: \href{https://www.linkedin.com/in/mouhsin-tanani-692b87263/}{TananiMouhsin} | GitHub: \href{https://github.com/TananiMouhsin}{TananiMouhsin}
-}
+\faMapMarker* Taroudant, Morocco \sep
+\href{mailto:tananimouhsin@gmail.com}{\faEnvelope[regular]\ tananimouhsin@gmail.com} \sep
+\faPhone* \ 212 6 87 01 14 68 \sep
+\href{https://www.linkedin.com/in/mouhsin-tanani-692b87263/}{\faLinkedinIn\ TananiMouhsin} \sep
+\href{https://github.com/TananiMouhsin}{\faGithub\ TananiMouhsin}
+}%
+\end{minipage}%
+\hfill%
+\begin{minipage}[c]{0.23\textwidth}
+    \vspace*{0pt}
+    \centering
+    \begin{tikzpicture}
+        \node[circle, minimum size=3cm, path picture={ % shrink picture
+            \node at (path picture bounding box.center) {
+                \includegraphics[width=3cm,height=3cm]{pic.png}% Please ensure 'pic.png' is in the same directory or adjust path.
+            };
+        }] {};
+    \end{tikzpicture}
+\end{minipage}
 
 \vspace{1pt}
 
-%% ======================
-%% EDUCATION
-%% ======================
+% ======================
+% PROFILE (NEW SECTION)
+% ======================
+\section*{Profile} % Using starred section to remove number
+\vspace{-6pt} % Adjust vertical spacing as needed
+\begin{tcolorbox}[sharpish corners, boxrule=0pt, top=2pt, bottom=2pt, left=0pt, right=0pt,
+                  colback=black!5!white, colframe=black!5!white,
+                  enlarge left by=-1.0cm, enlarge right by=-1.0cm,
+                  width=\textwidth+2.0cm, % Make it full width
+                  valign=center,
+                  before skip=0pt, after skip=0pt]
+  \justifying\small
+  Highly analytical and results-driven AI \& Data Science Engineering student with a strong foundation in \textbf{data analysis}, machine learning, and reporting. Proven ability to translate complex data into actionable insights, develop predictive models, and optimize processes. Eager to leverage strong \textbf{analytical thinking} and technical skills to contribute to data-driven decision-making and dashboard creation.
+\end{tcolorbox}
+\vspace{-6pt} % Adjust vertical spacing after the box
+
+% ======================
+% EDUCATION
+% ======================
 \section{Education}
 \resumeSubHeadingListStart
 
 \resumeSubheading
-{ENSIASD --- National School of AI and Digital Sciences}
+{ENSIASD – National School of AI and Digital Sciences}
 {Taroudant, Morocco}
 {2nd year Engineering Cycle student in Data Science, Big Data and AI}
 {2024 -- Present}
@@ -89,22 +138,22 @@ Taroudant, Morocco | Email: \href{mailto:tananimouhsin@gmail.com}{tananimouhsin@
 
 \resumeSubHeadingListEnd
 
-%% ======================
-%% EXPERIENCE
-%% ======================
+% ======================
+% EXPERIENCE
+% ======================
 \section{Experience}
 \resumeSubHeadingListStart
 
 \resumeSubheading
-{AI Engineering Intern --- XAI}
+{AI Engineering Intern – XAI}
 {Remote}
 {Artificial Intelligence Internship}
 {Jul 2025 -- Aug 2025}
 
 \resumeItemListStart
-\item Developed a real-time \textbf{multi-modal emotion recognition system}, demonstrating strong \textbf{data analysis} capabilities across text and audio streams.
-\item Applied advanced \textbf{data analysis} techniques to fine-tune a \textbf{BERT-based Transformer} for accurate text emotion classification.
-\item Conducted in-depth audio \textbf{data analysis}, extracting \textbf{TRILL audio embeddings} and training a \textbf{CNN-LSTM} model for robust prosody-based emotion detection.
+\item Engineered a real-time \textbf{multi-modal emotion recognition system}, involving comprehensive \textbf{data processing} and analytical pipeline development for text and audio streams.
+\item Fine-tuned a \textbf{BERT-based Transformer} for text emotion classification, deriving insights from complex linguistic data through rigorous analysis.
+\item Extracted \textbf{TRILL audio embeddings} and trained a \textbf{CNN–LSTM} model for prosody-based emotion detection, demonstrating advanced feature engineering techniques.
 \resumeItemListEnd
 
 \textbf{Tech:} Python, TensorFlow, PyTorch, HuggingFace Transformers, TRILL, BERT, Librosa, FastAPI
@@ -112,82 +161,80 @@ Taroudant, Morocco | Email: \href{mailto:tananimouhsin@gmail.com}{tananimouhsin@
 \vspace{1pt}
 
 \resumeSubheading
-{AI Development Intern --- HYATT Regency}
+{AI Development Intern – HYATT Regency}
 {Casablanca, Morocco}
 {Mobile \& AI Development Internship}
 {Apr 2024 -- Jun 2024}
 
 \resumeItemListStart
-\item Led \textbf{data analysis} to develop a \textbf{Random Forest classifier} for reservation cancellation prediction, achieving an \textbf{86\% accuracy} rate and providing actionable analytical insights for hotel management.
-\item Designed and implemented a hotel and event booking mobile application with administrative features, streamlining data management and \textbf{reducing processing time by 37\%}.
+\item Performed in-depth \textbf{data analysis} to develop a \textbf{Random Forest classifier} for reservation cancellation prediction, achieving \textbf{86\% accuracy} and providing actionable insights for operational improvements.
+\item Developed a hotel and event booking mobile application with admin management features, contributing to a \textbf{37\% reduction in processing time} and improved data handling.
 \resumeItemListEnd
 
-\textbf{Tech:} Python, Scikit-learn, Pandas, PostgreSQL, Flutter, NestJS
+\textbf{Tech:} Python, Scikit-learn, Pandas, PostgreSQL, Flutter, NestJS 
 
 \vspace{1pt}
 
 \resumeSubheading
-{AI Development Intern --- Delegation of Agriculture}
+{AI Development Intern – Delegation of Agriculture}
 {Guelmim, Morocco}
 {Web \& AI Development Internship}
 {Jul 2023}
 
 \resumeItemListStart
-\item Utilized \textbf{data analysis} to implement a \textbf{Random Forest-based crop recommendation model}, integrating climate, soil, and land features to provide data-driven agricultural insights.
-\item Developed a digital platform to connect local farmers directly with buyers, resulting in a measurable \textbf{increase in farmers' income} by optimizing market access and transparency.
+\item Conducted detailed \textbf{data analysis} of climate, soil, and land features to implement a \textbf{Random Forest-based crop recommendation model}, providing data-driven agricultural guidance and supporting informed decision-making.
+\item Developed a digital platform to connect local farmers directly to buyers, leveraging data to optimize market access and contribute to an \textbf{increase in farmers' income}.
 \resumeItemListEnd
 
 \textbf{Tech:} Python, Scikit-learn, Pandas
 
 \resumeSubHeadingListEnd
 
-%% ======================
-%% PROJECTS
-%% ======================
+% ======================
+% PROJECTS
+% ======================
 \section{Projects}
 \resumeSubHeadingListStart
 
 \resumeProject
-{Chifaa --- AI-Powered Medical Diagnosis Mobile App}
-{Mobile application providing heart failure and brain stroke prediction from laboratory data via OCR, and Alzheimer's disease prediction from MRI images.}
-{Tech: Python, TensorFlow, Scikit-learn, OCR, NestJS, Flutter, PostgreSQL}
+{Chifaa – AI-Powered Medical Diagnosis Mobile App}
+{Mobile application providing heart failure and brain stroke prediction from laboratory data via OCR, and Alzheimer’s disease prediction from MRI images.}
+{Tech: Python, TensorFlow, Scikit-learn, OCR, NestJS, Flutter, PostgreSQL} % Moved tech to end of project description
 \resumeItemListStart
-\item Engineered an \textbf{OCR system} for efficient extraction and processing of clinical data from laboratory reports, enabling comprehensive \textbf{data analysis} for medical predictions.
-\item Conducted advanced \textbf{data analysis} and model integration, deploying multiple machine learning models (\textbf{Random Forest, SVM, CNN}) with a backend, achieving an \textbf{overall accuracy exceeding 85\%} in medical diagnosis and providing robust analytical outputs.
+\item Engineered an \textbf{OCR system} for efficient extraction and preparation of relevant clinical data from lab reports for subsequent analysis and predictive modeling.
+\item Implemented and integrated multiple models (\textbf{Random Forest, SVM, CNN}) with the backend, achieving an \textbf{overall accuracy exceeding 85\%}, storing predictions via \textbf{NestJS APIs}.
 \resumeItemListEnd
 \vspace{1pt}
 
 \resumeProject
-{CVFit --- AI-Based CV Optimizer \& Job Matching Platform}
+{CVFit – AI-Based CV Optimizer \& Job Matching Platform}
 {Web-based platform that analyzes CVs, suggests targeted improvements, and scrapes relevant job opportunities from the web.}
-{Tech: Java, Spring Boot, Jsoup, OpenAI API, REST APIs}
+{Tech: Java, Spring Boot, Jsoup, OpenAI API, REST APIs} % Moved tech to end of project description
 \resumeItemListStart
-\item Designed and implemented structured \textbf{prompt engineering} with the \textbf{OpenAI API} to perform \textbf{data analysis} on CVs and generate personalized, data-driven improvement suggestions.
-\item Developed automated job opportunity \textbf{data scraping} and relevance-based ranking systems using \textbf{Jsoup}, enhancing \textbf{reporting automation} for job seekers.
-\item Significantly streamlined CV optimization and job discovery processes, demonstrably \textbf{reducing job search time by 30\%} through data-driven recommendations and automated matching.
+\item Utilized the \textbf{OpenAI API} with structured prompt engineering to analyze CV content and generate personalized improvement suggestions, demonstrating advanced \textbf{analytical thinking} in text data processing.
+\item Implemented robust \textbf{job opportunity scraping} and developed a relevance-based ranking system using Jsoup, showcasing strong data collection and comparative \textbf{analysis skills}.
+\item Streamlined CV optimization and job discovery, \textbf{reducing job search time by 30\%} through data-driven recommendations.
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
 
-%% ======================
-%% SKILLS & LANGUAGES
-%% ======================
-\section{Technologies}
+% ======================
+% SKILLS & TECHNOLOGIES
+% ======================
+\section{Skills \& Technologies} % Renamed section
 \small{%
-\textbf{Languages:} Python, Java, TypeScript, Dart\\
-\textbf{Frameworks:} FastAPI, Spring Boot, Flutter\\
-\textbf{Databases:} MongoDB, PostgreSQL, MySQL\\
-\textbf{Data Analysis \& ML:} NLP (Transformers, BERT, Hugging Face), Computer Vision (OCR), Audio Processing (TRILL), Random Forest, SVM, CNN, LSTM\\
-\textbf{Libraries:} Pandas, NumPy, Scikit-learn, TensorFlow, PyTorch\\
-\textbf{Containerisation \& Orchestration:} Docker\\
-\textbf{Tools:} Git, GitHub, REST APIs, Agile
+\textbf{Programming Languages:} Python, Java, TypeScript, Dart, SQL\\%
+\textbf{Data Analysis & ML:} Pandas, NumPy, Scikit-learn, TensorFlow, PyTorch, NLP (Transformers, BERT, Hugging Face), Computer Vision (OCR), Audio Processing (TRILL), Random Forest, SVM, CNN, LSTM, Predictive Modeling, Data Visualization, Excel\\%
+\textbf{Databases:} PostgreSQL, MySQL, MongoDB\\%
+\textbf{Frameworks & Tools:} FastAPI, Spring Boot, Flutter, NestJS, Docker, Git, GitHub, REST APIs, Jsoup, Agile\\%
+\textbf{Concepts & Methodologies:} Data Analysis, Analytical Thinking, Reporting Automation, Dashboard Design Principles, Problem Solving, Data-Driven Decision Making%
 }%
 
-\vspace{-6pt}
+\vspace{-6pt} % move it up
 \section{Languages \& Activities}
 \small{%
-\textbf{Languages:} Arabic (Native), French (Fluent), English (Advanced) \\
-\textbf{Activities:} President of the IT Innovation Club at ENSIASD, Onsite Events Responsible at MDS
+\textbf{Languages:} Arabic (Native), French (Fluent), English (Advanced) \\%
+\textbf{Activities:} President of the IT Innovation Club at ENSIASD, Onsite Events Responsible at MDS%
 }%
 
 \end{document}
