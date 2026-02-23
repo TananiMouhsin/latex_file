@@ -1,4 +1,4 @@
-\documentclass[a4paper,9pt]{article} % 9pt instead of 10pt
+\documentclass[a4paper,9pt]{article} %% 9pt instead of 10pt
 
 \usepackage{latexsym}
 \usepackage{xcolor}
@@ -17,31 +17,26 @@
 \usepackage[T1]{fontenc}
 \usepackage{tikz}
 
-% ====== PAGE SETTINGS ======
-\geometry{left=1.0cm, top=0.5cm, right=1.0cm, bottom=0.5cm} % smaller margins
+%% ====== PAGE SETTINGS ======
+\geometry{left=1.0cm, top=0.5cm, right=1.0cm, bottom=0.5cm} %% smaller margins
 \pagestyle{fancy}
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
 \setlength{\parskip}{0pt}
-\linespread{0.93} % slightly tighter line spacing
+\linespread{0.93} %% slightly tighter line spacing
 
-% ====== SECTION FORMATTING ======
-% Redefine section to include an icon
-% \newcommand{\rsection}[2]{%
-%   \vspace{-10pt}\section{\raggedright\scshape\large #1 \faIcon{#2}}\vspace{-6pt}
-% }
-
+%% ====== SECTION FORMATTING ======
 \titleformat{\section}{%
   \vspace{-10pt}\scshape\raggedright\large%
 }{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
 
-% ====== ITEMIZE SHORTCUTS ======
+%% ====== ITEMIZE SHORTCUTS ======
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0pt, label={}, topsep=0pt]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=1em, topsep=0pt, itemsep=0pt]}
 \newcommand{\resumeItemListEnd}{\end{itemize}}
 
-% ====== SUBHEADING ======
+%% ====== SUBHEADING ======
 \newcommand{\resumeSubheading}[4]{%
   \item
   \begin{tabular*}{0.98\textwidth}{l@{\extracolsep{\fill}}r}%
@@ -56,9 +51,9 @@
   \textit{\small #2}%
 }
 
-% ======================
-% HEADER
-% ======================
+%% ======================
+%% HEADER
+%% ======================
 \begin{document}
 
 \newcommand{\sep}{\hspace{0.2cm}\textbar\hspace{0.2cm}}
@@ -66,10 +61,10 @@
 \begin{minipage}[c]{0.75\textwidth}
     \vspace*{0pt}
     \raggedright
-    \textbf{\fontsize{16 pt}{16 pt}\selectfont TANANI Mouhsin} % smaller than 18pt
+    \textbf{\fontsize{16 pt}{16 pt}\selectfont TANANI Mouhsin} %% smaller than 18pt
 
     \vspace{0.05 cm}
-    \textbf{\fontsize{9 pt}{9 pt}\selectfont Aspiring Data Analyst | AI & Data Science Engineering Student} % Optimized for target job
+    \textbf{\fontsize{9 pt}{9 pt}\selectfont Aspiring Data Analyst | AI Engineer}
 
     \vspace{0.05 cm}
 \normalsize
@@ -79,16 +74,16 @@
 \faPhone* \ 212 6 87 01 14 68 \sep
 \href{https://www.linkedin.com/in/mouhsin-tanani-692b87263/}{\faLinkedinIn\ TananiMouhsin} \sep
 \href{https://github.com/TananiMouhsin}{\faGithub\ TananiMouhsin}
-}%
-\end{minipage}%
-\hfill%
+}
+\end{minipage}
+\hfill
 \begin{minipage}[c]{0.23\textwidth}
     \vspace*{0pt}
     \centering
     \begin{tikzpicture}
-        \node[circle, minimum size=3cm, path picture={ % shrink picture
+        \node[circle, minimum size=3cm, path picture={ %% shrink picture
             \node at (path picture bounding box.center) {
-                \includegraphics[width=3cm,height=3cm]{pic.png}% Please ensure 'pic.png' is in the same directory or adjust path.
+                \includegraphics[width=3cm,height=3cm]{pic.png}% Please ensure 'pic.png' exists or replace with a valid path.
             };
         }] {};
     \end{tikzpicture}
@@ -96,25 +91,17 @@
 
 \vspace{1pt}
 
-% ======================
-% PROFILE (NEW SECTION)
-% ======================
-\section*{Profile} % Using starred section to remove number
-\vspace{-6pt} % Adjust vertical spacing as needed
-\begin{tcolorbox}[sharpish corners, boxrule=0pt, top=2pt, bottom=2pt, left=0pt, right=0pt,
-                  colback=black!5!white, colframe=black!5!white,
-                  enlarge left by=-1.0cm, enlarge right by=-1.0cm,
-                  width=\textwidth+2.0cm, % Make it full width
-                  valign=center,
-                  before skip=0pt, after skip=0pt]
-  \justifying\small
-  Highly analytical and results-driven AI \& Data Science Engineering student with a strong foundation in \textbf{data analysis}, machine learning, and reporting. Proven ability to translate complex data into actionable insights, develop predictive models, and optimize processes. Eager to leverage strong \textbf{analytical thinking} and technical skills to contribute to data-driven decision-making and dashboard creation.
-\end{tcolorbox}
-\vspace{-6pt} % Adjust vertical spacing after the box
+%% ======================
+%% SUMMARY
+%% ======================
+\section{Summary}
+\small{
+Highly motivated and analytical student pursuing an Engineering Cycle in Data Science, Big Data, and AI, eager to apply predictive modeling and data analysis skills to drive business insights. Proven ability to develop data-driven solutions, automate processes, and extract valuable information from complex datasets, with a strong foundation in machine learning and a passion for creating impactful reports and visualizations. Seeking opportunities to contribute to data analysis, reporting automation, and dashboard creation.
+}
 
-% ======================
-% EDUCATION
-% ======================
+%% ======================
+%% EDUCATION
+%% ======================
 \section{Education}
 \resumeSubHeadingListStart
 
@@ -138,9 +125,9 @@
 
 \resumeSubHeadingListEnd
 
-% ======================
-% EXPERIENCE
-% ======================
+%% ======================
+%% EXPERIENCE
+%% ======================
 \section{Experience}
 \resumeSubHeadingListStart
 
@@ -151,9 +138,9 @@
 {Jul 2025 -- Aug 2025}
 
 \resumeItemListStart
-\item Engineered a real-time \textbf{multi-modal emotion recognition system}, involving comprehensive \textbf{data processing} and analytical pipeline development for text and audio streams.
-\item Fine-tuned a \textbf{BERT-based Transformer} for text emotion classification, deriving insights from complex linguistic data through rigorous analysis.
-\item Extracted \textbf{TRILL audio embeddings} and trained a \textbf{CNN–LSTM} model for prosody-based emotion detection, demonstrating advanced feature engineering techniques.
+\item Developed a real-time \textbf{multi-modal emotion recognition system} using text and audio streams, demonstrating advanced data processing and analytical capabilities.
+\item Fine-tuned a \textbf{BERT-based Transformer} for text emotion classification, involving extensive data preparation and model optimization.
+\item Extracted \textbf{TRILL audio embeddings} and trained a \textbf{CNN–LSTM} model for prosody-based emotion detection, showcasing expertise in signal processing and deep learning for data interpretation.
 \resumeItemListEnd
 
 \textbf{Tech:} Python, TensorFlow, PyTorch, HuggingFace Transformers, TRILL, BERT, Librosa, FastAPI
@@ -167,8 +154,8 @@
 {Apr 2024 -- Jun 2024}
 
 \resumeItemListStart
-\item Performed in-depth \textbf{data analysis} to develop a \textbf{Random Forest classifier} for reservation cancellation prediction, achieving \textbf{86\% accuracy} and providing actionable insights for operational improvements.
-\item Developed a hotel and event booking mobile application with admin management features, contributing to a \textbf{37\% reduction in processing time} and improved data handling.
+\item Conducted in-depth \textbf{data analysis} of historical reservation data to develop a \textbf{Random Forest classifier} for reservation cancellation prediction, achieving \textbf{86\% accuracy} and providing valuable insights for operational planning.
+\item Developed a hotel and event booking mobile application with admin management features, contributing to improved data accessibility and reducing processing time by 37\%.
 \resumeItemListEnd
 
 \textbf{Tech:} Python, Scikit-learn, Pandas, PostgreSQL, Flutter, NestJS 
@@ -182,59 +169,60 @@
 {Jul 2023}
 
 \resumeItemListStart
-\item Conducted detailed \textbf{data analysis} of climate, soil, and land features to implement a \textbf{Random Forest-based crop recommendation model}, providing data-driven agricultural guidance and supporting informed decision-making.
-\item Developed a digital platform to connect local farmers directly to buyers, leveraging data to optimize market access and contribute to an \textbf{increase in farmers' income}.
+\item Integrated and analyzed diverse datasets (climate, soil, and land features) to implement a \textbf{Random Forest-based crop recommendation model}, enabling data-driven agricultural decisions.
+\item Built a digital platform connecting local farmers directly to buyers, contributing to an \textbf{increase in farmers’ income} by facilitating data exchange and market access.
 \resumeItemListEnd
 
 \textbf{Tech:} Python, Scikit-learn, Pandas
 
 \resumeSubHeadingListEnd
 
-% ======================
-% PROJECTS
-% ======================
+%% ======================
+%% PROJECTS
+%% ======================
 \section{Projects}
 \resumeSubHeadingListStart
 
 \resumeProject
 {Chifaa – AI-Powered Medical Diagnosis Mobile App}
 {Mobile application providing heart failure and brain stroke prediction from laboratory data via OCR, and Alzheimer’s disease prediction from MRI images.}
-{Tech: Python, TensorFlow, Scikit-learn, OCR, NestJS, Flutter, PostgreSQL} % Moved tech to end of project description
 \resumeItemListStart
-\item Engineered an \textbf{OCR system} for efficient extraction and preparation of relevant clinical data from lab reports for subsequent analysis and predictive modeling.
-\item Implemented and integrated multiple models (\textbf{Random Forest, SVM, CNN}) with the backend, achieving an \textbf{overall accuracy exceeding 85\%}, storing predictions via \textbf{NestJS APIs}.
+\item Developed an \textbf{OCR system} for automated extraction of relevant clinical data, enabling efficient data collection and preparation for predictive models.
+\item Implemented and integrated multiple predictive models (\textbf{Random Forest, SVM, CNN}) with the backend, achieving an \textbf{overall accuracy exceeding 85\%} in medical diagnosis and storing predictions via \textbf{NestJS APIs}.
 \resumeItemListEnd
+{Tech: Python, TensorFlow, Scikit-learn, OCR, NestJS, Flutter, PostgreSQL}
 \vspace{1pt}
 
 \resumeProject
 {CVFit – AI-Based CV Optimizer \& Job Matching Platform}
 {Web-based platform that analyzes CVs, suggests targeted improvements, and scrapes relevant job opportunities from the web.}
-{Tech: Java, Spring Boot, Jsoup, OpenAI API, REST APIs} % Moved tech to end of project description
 \resumeItemListStart
-\item Utilized the \textbf{OpenAI API} with structured prompt engineering to analyze CV content and generate personalized improvement suggestions, demonstrating advanced \textbf{analytical thinking} in text data processing.
-\item Implemented robust \textbf{job opportunity scraping} and developed a relevance-based ranking system using Jsoup, showcasing strong data collection and comparative \textbf{analysis skills}.
-\item Streamlined CV optimization and job discovery, \textbf{reducing job search time by 30\%} through data-driven recommendations.
+\item Implemented job opportunity scraping and relevance-based ranking using \textbf{Jsoup}, demonstrating robust data extraction and analytical processing.
+\item Leveraged the \textbf{OpenAI API} with structured \textbf{prompt engineering} to generate personalized CV improvement suggestions, providing data-driven recommendations.
+\item Streamlined CV optimization and job discovery, \textbf{reducing job search time by 30\%} through efficient data matching and analysis.
 \resumeItemListEnd
+\textbf{Tech:} Java, Spring Boot, Jsoup, OpenAI API, REST APIs
 
 \resumeSubHeadingListEnd
 
-% ======================
-% SKILLS & TECHNOLOGIES
-% ======================
-\section{Skills \& Technologies} % Renamed section
-\small{%
-\textbf{Programming Languages:} Python, Java, TypeScript, Dart, SQL\\%
-\textbf{Data Analysis & ML:} Pandas, NumPy, Scikit-learn, TensorFlow, PyTorch, NLP (Transformers, BERT, Hugging Face), Computer Vision (OCR), Audio Processing (TRILL), Random Forest, SVM, CNN, LSTM, Predictive Modeling, Data Visualization, Excel\\%
-\textbf{Databases:} PostgreSQL, MySQL, MongoDB\\%
-\textbf{Frameworks & Tools:} FastAPI, Spring Boot, Flutter, NestJS, Docker, Git, GitHub, REST APIs, Jsoup, Agile\\%
-\textbf{Concepts & Methodologies:} Data Analysis, Analytical Thinking, Reporting Automation, Dashboard Design Principles, Problem Solving, Data-Driven Decision Making%
-}%
+%% ======================
+%% SKILLS & LANGUAGES
+%% ======================
+\section{Technologies}
+\small{
+\textbf{Data Analysis \& BI:} \faPython\ Python, \faDatabase\ SQL (PostgreSQL, MySQL), Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, Analytical Thinking, Reporting Automation Principles\\
+\textbf{AI \& ML:} NLP (Transformers, BERT, Hugging Face), Computer Vision (OCR), Audio Processing (TRILL), Random Forest, SVM, CNN, LSTM, Predictive Analytics\\
+\textbf{Frameworks:} FastAPI, Spring Boot, Flutter, NestJS\\
+\textbf{Databases:} MongoDB, PostgreSQL, MySQL\\
+\textbf{Containerisation:} \faDocker\ Docker\\
+\textbf{Tools:} \faGitAlt\ Git, \faGithub\ GitHub, REST APIs, Agile
+}
 
-\vspace{-6pt} % move it up
+\vspace{-6pt} %% move it up
 \section{Languages \& Activities}
-\small{%
-\textbf{Languages:} Arabic (Native), French (Fluent), English (Advanced) \\%
-\textbf{Activities:} President of the IT Innovation Club at ENSIASD, Onsite Events Responsible at MDS%
-}%
+\small{
+\textbf{Languages:} Arabic (Native), French (Fluent), English (Advanced) \\
+\textbf{Activities:} President of the IT Innovation Club at ENSIASD, Onsite Events Responsible at MDS
+}
 
 \end{document}
